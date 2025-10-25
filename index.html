@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Appointment / Request Form</title>
+</head>
+<body>
+  <h2><strong > 24L31A05S5 <br> Appointment Request Form</strong></h1>
+  <p>Please fill in this form to request an appointment.</p>
+
+  <form action="#" method="post" autocomplete="on">
+    <table cellpadding="6" cellspacing="0" border="0">
+      <!-- Name row -->
+      <tr>
+        <td><label for="firstName">First Name</label></td>
+        <td><input id="firstName" name="firstName" type="text" required /></td>
+        <td><label for="lastName">Last Name</label></td>
+        <td><input id="lastName" name="lastName" type="text" required /></td>
+      </tr>
+
+      <!-- Contact row -->
+      <tr>
+        <td><label for="phone">Contact Number</label></td>
+        <td><input id="phone" name="phone" type="tel" pattern="[0-9+()\-\s]{7,20}" required /></td>
+        <td><label for="email">Email Address</label></td>
+        <td><input id="email" name="email" type="email" required /></td>
+      </tr>
+
+      <!-- Address rows -->
+      <tr>
+        <td><label for="street">Street Address</label></td>
+        <td colspan="3"><input id="street" name="street" type="text" style="width:100%;" required /></td>
+      </tr>
+      <tr>
+        <td><label for="city">City / Province</label></td>
+        <td><input id="city" name="city" type="text" required /></td>
+        <td><label for="state">State</label></td>
+        <td><input id="state" name="state" type="text" required /></td>
+      </tr>
+      <tr>
+        <td><label for="zip">ZIP / Postal Code</label></td>
+        <td><input id="zip" name="zip" type="text" pattern="[A-Za-z0-9\s\-]{3,10}" /></td>
+        <td><label for="country">Country</label></td>
+        <td>
+          <select id="country" name="country" required>
+            <option value="">-- Select country --</option>
+            <option>India</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Other</option>
+          </select>
+        </td>
+      </tr>
+
+      <!-- Service / Interests -->
+      <tr>
+        <td><label for="service">Select Service</label></td>
+        <td>
+          <select id="service" name="service">
+            <option value="">-- Choose --</option>
+            <option>Product Inquiry</option>
+            <option>Technical Support</option>
+            <option>Sales / Quotation</option>
+            <option>General Appointment</option>
+          </select>
+        </td>
+        <td><label for="interests">What services are you interested in?</label></td>
+        <td>
+          <input id="interest1" name="interests" type="checkbox" value="consultation" />
+          <label for="interest1">Consultation</label><br />
+          <input id="interest2" name="interests" type="checkbox" value="demo" />
+          <label for="interest2">Demo</label><br />
+          <input id="interest3" name="interests" type="checkbox" value="purchase" />
+          <label for="interest3">Purchase</label>
+        </td>
+      </tr>
+
+      <!-- Date & Time -->
+      <tr>
+        <td><label for="date">Preferred Date</label></td>
+        <td><input id="date" name="date" type="date" /></td>
+        <td><label for="time">Preferred Time</label></td>
+        <td><input id="time" name="time" type="time" /></td>
+      </tr>
+
+      <!-- Additional info -->
+      <tr>
+        <td><label for="message">Any other specific data / notes</label></td>
+        <td colspan="3"><textarea id="message" name="message" rows="4" style="width:100%;"></textarea></td>
+      </tr>
+
+      <!-- How did you hear about us -->
+      <tr>
+        <td><label for="reference">How did you hear about us?</label></td>
+        <td colspan="3">
+          <select id="reference" name="reference">
+            <option value="">-- Select --</option>
+            <option>Friend / Family</option>
+            <option>Internet Search</option>
+            <option>Social Media</option>
+            <option>Advertisement</option>
+          </select>
+        </td>
+      </tr>
+
+      <!-- Submit row -->
+      <tr>
+        <td colspan="4" align="center">
+          <input type="reset" value="Reset" />
+          &nbsp;&nbsp;
+          <input type="submit" value="Submit Request" />
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
